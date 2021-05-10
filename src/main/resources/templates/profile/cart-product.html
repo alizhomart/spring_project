@@ -13,7 +13,6 @@
 					<span class="my-auto h6">Product Image</span> 
 					<span class="my-auto h6">Product</span> 
 					<span class="my-auto h6">Price</span>
-					<span class="my-auto h6">Delete</span>
 				</li>
 			</ul>
 			<ul class="list-group col-9" th:each="product : ${user.productList}">
@@ -21,7 +20,6 @@
 					<img th:src="${product.image}" height="100"> 
 					<span class="my-auto" th:text="${product.productName}"></span> 
 					<span class="my-auto" th:text="'$ '+${product.productPrice}"></span>
-					<span class="my-auto"><a href="#" th:href="@{'~/profile/deleteProduct/' + ${product.productId}}" class="btn btn-primary">Delete</a></span>
 				</li>
 			</ul>
 			<ul class="list-group col-9">
